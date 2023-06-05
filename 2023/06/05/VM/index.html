@@ -16,17 +16,19 @@
   <meta name="author" content="a-borel">
   <meta name="keywords" content="">
   
-    <meta name="description" content="VM虚拟机NAT模式连不上网win+r输入services.msc，将vmware相关服务设置为自动，关闭虚拟机防火墙：systemctl stop firewalld，编辑&#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-ens33文件，编辑vmware中虚拟网络编辑器。 ifcfg-ens33文件中ip应按照下图进行配置：  vm">
+    <meta name="description" content="VM虚拟机NAT模式连不上网win+r输入services.msc，将vmware相关服务设置为自动，关闭虚拟机防火墙：systemctl stop firewalld，编辑&#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-ens33文件，编辑vmware中虚拟网络编辑器。 ifcfg-ens33文件中ip应配置下图中的ip：  vm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VM">
 <meta property="og:url" content="http://example.com/2023/06/05/VM/index.html">
 <meta property="og:site_name" content="borel">
-<meta property="og:description" content="VM虚拟机NAT模式连不上网win+r输入services.msc，将vmware相关服务设置为自动，关闭虚拟机防火墙：systemctl stop firewalld，编辑&#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-ens33文件，编辑vmware中虚拟网络编辑器。 ifcfg-ens33文件中ip应按照下图进行配置：  vm">
+<meta property="og:description" content="VM虚拟机NAT模式连不上网win+r输入services.msc，将vmware相关服务设置为自动，关闭虚拟机防火墙：systemctl stop firewalld，编辑&#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-ens33文件，编辑vmware中虚拟网络编辑器。 ifcfg-ens33文件中ip应配置下图中的ip：  vm">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/image_q3-MItPHJf.png">
 <meta property="article:published_time" content="2023-06-05T07:39:13.473Z">
-<meta property="article:modified_time" content="2023-06-05T08:17:55.654Z">
+<meta property="article:modified_time" content="2023-06-05T13:06:09.322Z">
 <meta property="article:author" content="a-borel">
+<meta property="article:tag" content="Virtual Machine">
+<meta property="article:tag" content="bug">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/image_q3-MItPHJf.png">
   
@@ -72,7 +74,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -82,6 +84,21 @@
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
   
@@ -207,6 +224,11 @@
           
   <div class="mt-3">
     
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        a-borel
+      </span>
+    
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
@@ -239,6 +261,14 @@
     
 
     
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
     
   </div>
 
@@ -277,9 +307,9 @@
               <div class="markdown-body">
                 
                 <h1 id="VM"><a href="#VM" class="headerlink" title="VM"></a>VM</h1><h4 id="虚拟机NAT模式连不上网"><a href="#虚拟机NAT模式连不上网" class="headerlink" title="虚拟机NAT模式连不上网"></a>虚拟机NAT模式连不上网</h4><p>win+r输入services.msc，将vmware相关服务设置为自动，关闭虚拟机防火墙：systemctl stop firewalld，编辑&#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-ens33文件，编辑vmware中虚拟网络编辑器。</p>
-<p>ifcfg-ens33文件中ip应按照下图进行配置：</p>
+<p>ifcfg-ens33文件中ip应配置下图中的ip：</p>
 <p><img src="/img/image_q3-MItPHJf.png" srcset="/img/loading.gif" lazyload></p>
-<h4 id="vm共享文件夹没有文件"><a href="#vm共享文件夹没有文件" class="headerlink" title="vm共享文件夹没有文件"></a>vm共享文件夹没有文件</h4><p>今天在VMware中设置了共享文件夹后，在虚拟机中找不见共享文件夹，解决方法如下：<br>1.首先使用cd &#x2F;进入根目录<br>2.在进入mnt目录<br>3.然后看一下这个文件夹下是否有东西ls，若没有，新建文件夹hgfs<br>mkdir hgfs创建此文件<br>4.执行vmhgfs-fuse &#x2F;mnt&#x2F;hgfs<br>5.此时，在进入hgfs文件夹，cd hgfs<br>6.最后执行ls，即可看到我们在Windows端的共享文件；</p>
+<h4 id="vm共享文件夹没有文件"><a href="#vm共享文件夹没有文件" class="headerlink" title="vm共享文件夹没有文件"></a>vm共享文件夹没有文件</h4><p>今天在VMware中设置了共享文件夹后，在虚拟机中找不见共享文件夹，解决方法如下：<br>1.首先使用cd &#x2F;进入根目录<br>2.再进入mnt目录<br>3.然后看一下这个文件夹下是否有东西ls，若没有，新建文件夹hgfs<br>mkdir hgfs创建此文件<br>4.执行vmhgfs-fuse &#x2F;mnt&#x2F;hgfs<br>5.此时，在进入hgfs文件夹，cd hgfs<br>6.最后执行ls，即可看到我们在Windows端的共享文件；</p>
 
                 
               </div>
@@ -288,6 +318,36 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Virtual-Machine/" class="category-chain-item">Virtual Machine</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Virtual-Machine/">#Virtual Machine</a>
+      
+        <a href="/tags/bug/">#bug</a>
+      
+    </div>
   
 </div>
 
@@ -356,6 +416,35 @@
             </div>
 
             
+  <article id="comments" lazyload>
+    
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createCssLink('https://lib.baomitu.com/waline/2.5.1/waline.min.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/waline/2.5.1/waline.min.js', function() {
+        var options = Object.assign(
+          {"serverURL":"https://mack189-github-awjzjs0ak-mack189.vercel.app/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
+          {
+            el: '#waline',
+            path: window.location.pathname
+          }
+        )
+        Waline.init(options);
+        Fluid.utils.waitElementVisible('#waline .vcontent', () => {
+          var imgSelector = '#waline .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+  </article>
+
+
           </article>
         </div>
       </div>
@@ -445,7 +534,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/Mack189" target="_blank" rel="nofollow noopener"><span>Mack189</span></a> 
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/Mack189" target="_blank" rel="nofollow noopener"><span>Mack189</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/vvd_js/duration.js"></script> </div> 
     </div>
   
   

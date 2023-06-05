@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title></title>
+    <link href="/2023/06/05/VM/"/>
+    <url>/2023/06/05/VM/</url>
+    
+    <content type="html"><![CDATA[<p>title: VM</p><h1 id="VM"><a href="#VM" class="headerlink" title="VM"></a>VM</h1><h4 id="虚拟机NAT模式连不上网"><a href="#虚拟机NAT模式连不上网" class="headerlink" title="虚拟机NAT模式连不上网"></a>虚拟机NAT模式连不上网</h4><p>win+r输入services.msc，将vmware相关服务设置为自动，关闭虚拟机防火墙：systemctl stop firewalld，编辑&#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-ens33文件，编辑vmware中虚拟网络编辑器。</p><p>ifcfg-ens33文件中ip应按照下图进行配置：</p><p><img src="/image/image_q3-MItPHJf.png"></p><h4 id="vm共享文件夹没有文件"><a href="#vm共享文件夹没有文件" class="headerlink" title="vm共享文件夹没有文件"></a>vm共享文件夹没有文件</h4><p>今天在VMware中设置了共享文件夹后，在虚拟机中找不见共享文件夹，解决方法如下：<br>1.首先使用cd &#x2F;进入根目录<br>2.在进入mnt目录<br>3.然后看一下这个文件夹下是否有东西ls，若没有，新建文件夹hgfs<br>mkdir hgfs创建此文件<br>4.执行vmhgfs-fuse &#x2F;mnt&#x2F;hgfs<br>5.此时，在进入hgfs文件夹，cd hgfs<br>6.最后执行ls，即可看到我们在Windows端的共享文件；</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/2023/06/04/hello-world/"/>
     <url>/2023/06/04/hello-world/</url>

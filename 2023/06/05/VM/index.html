@@ -16,23 +16,23 @@
   <meta name="author" content="a-borel">
   <meta name="keywords" content="">
   
-    <meta name="description" content="title: VM VM虚拟机NAT模式连不上网win+r输入services.msc，将vmware相关服务设置为自动，关闭虚拟机防火墙：systemctl stop firewalld，编辑&#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-ens33文件，编辑vmware中虚拟网络编辑器。 ifcfg-ens33文件中ip应按照下">
+    <meta name="description" content="VM虚拟机NAT模式连不上网win+r输入services.msc，将vmware相关服务设置为自动，关闭虚拟机防火墙：systemctl stop firewalld，编辑&#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-ens33文件，编辑vmware中虚拟网络编辑器。 ifcfg-ens33文件中ip应按照下图进行配置：  vm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="borel">
+<meta property="og:title" content="VM">
 <meta property="og:url" content="http://example.com/2023/06/05/VM/index.html">
 <meta property="og:site_name" content="borel">
-<meta property="og:description" content="title: VM VM虚拟机NAT模式连不上网win+r输入services.msc，将vmware相关服务设置为自动，关闭虚拟机防火墙：systemctl stop firewalld，编辑&#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-ens33文件，编辑vmware中虚拟网络编辑器。 ifcfg-ens33文件中ip应按照下">
+<meta property="og:description" content="VM虚拟机NAT模式连不上网win+r输入services.msc，将vmware相关服务设置为自动，关闭虚拟机防火墙：systemctl stop firewalld，编辑&#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-ens33文件，编辑vmware中虚拟网络编辑器。 ifcfg-ens33文件中ip应按照下图进行配置：  vm">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/image/image_q3-MItPHJf.png">
+<meta property="og:image" content="http://example.com/img/image_q3-MItPHJf.png">
 <meta property="article:published_time" content="2023-06-05T07:39:13.473Z">
-<meta property="article:modified_time" content="2023-06-05T07:40:23.975Z">
+<meta property="article:modified_time" content="2023-06-05T08:17:55.654Z">
 <meta property="article:author" content="a-borel">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/image/image_q3-MItPHJf.png">
+<meta name="twitter:image" content="http://example.com/img/image_q3-MItPHJf.png">
   
   
   
-  <title>borel</title>
+  <title>VM - borel</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="VM"></span>
           
         </div>
 
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          416 字
+          408 字
         
       </span>
     
@@ -269,15 +269,14 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none"></h1>
+            <h1 style="display: none">VM</h1>
             
             
               <div class="markdown-body">
                 
-                <p>title: VM</p>
-<h1 id="VM"><a href="#VM" class="headerlink" title="VM"></a>VM</h1><h4 id="虚拟机NAT模式连不上网"><a href="#虚拟机NAT模式连不上网" class="headerlink" title="虚拟机NAT模式连不上网"></a>虚拟机NAT模式连不上网</h4><p>win+r输入services.msc，将vmware相关服务设置为自动，关闭虚拟机防火墙：systemctl stop firewalld，编辑&#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-ens33文件，编辑vmware中虚拟网络编辑器。</p>
+                <h1 id="VM"><a href="#VM" class="headerlink" title="VM"></a>VM</h1><h4 id="虚拟机NAT模式连不上网"><a href="#虚拟机NAT模式连不上网" class="headerlink" title="虚拟机NAT模式连不上网"></a>虚拟机NAT模式连不上网</h4><p>win+r输入services.msc，将vmware相关服务设置为自动，关闭虚拟机防火墙：systemctl stop firewalld，编辑&#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-ens33文件，编辑vmware中虚拟网络编辑器。</p>
 <p>ifcfg-ens33文件中ip应按照下图进行配置：</p>
-<p><img src="/image/image_q3-MItPHJf.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/img/image_q3-MItPHJf.png" srcset="/img/loading.gif" lazyload></p>
 <h4 id="vm共享文件夹没有文件"><a href="#vm共享文件夹没有文件" class="headerlink" title="vm共享文件夹没有文件"></a>vm共享文件夹没有文件</h4><p>今天在VMware中设置了共享文件夹后，在虚拟机中找不见共享文件夹，解决方法如下：<br>1.首先使用cd &#x2F;进入根目录<br>2.在进入mnt目录<br>3.然后看一下这个文件夹下是否有东西ls，若没有，新建文件夹hgfs<br>mkdir hgfs创建此文件<br>4.执行vmhgfs-fuse &#x2F;mnt&#x2F;hgfs<br>5.此时，在进入hgfs文件夹，cd hgfs<br>6.最后执行ls，即可看到我们在Windows端的共享文件；</p>
 
                 
@@ -296,7 +295,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
+      <div>VM</div>
       <div>http://example.com/2023/06/05/VM/</div>
     </div>
     <div class="license-meta">

@@ -4,6 +4,81 @@
   
   
   <entry>
+    <title>git创建仓库流程(3)</title>
+    <link href="/2023/06/06/git%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93%E6%B5%81%E7%A8%8B3/"/>
+    <url>/2023/06/06/git%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93%E6%B5%81%E7%A8%8B3/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Git-创建仓库流程"><a href="#Git-创建仓库流程" class="headerlink" title="Git 创建仓库流程"></a>Git 创建仓库流程</h1><p>在 Git 中，创建新的仓库非常简单，只需要按照以下步骤操作即可。</p><h2 id="1-创建新的仓库"><a href="#1-创建新的仓库" class="headerlink" title="1. 创建新的仓库"></a>1. 创建新的仓库</h2><p>首先，需要创建一个新的仓库。可以使用 <code>git init</code> 命令来创建一个新的 Git 仓库，该命令将在当前目录下创建一个名为 <code>.git</code> 的隐藏目录，用于存储 Git 的版本库等信息。</p><p>Copy</p><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crystal"><span class="hljs-variable">$ </span>git init<br></code></pre></td></tr></table></figure><h2 id="2-添加文件到仓库"><a href="#2-添加文件到仓库" class="headerlink" title="2. 添加文件到仓库"></a>2. 添加文件到仓库</h2><p>在创建新的仓库后，需要将项目文件添加到仓库中。可以使用 <code>git add</code> 命令将文件添加到 Git 的暂存区中，从而将修改的文件跟踪起来，准备提交到版本库中。</p><p>Copy</p><figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gams"><span class="hljs-symbol">$</span> git add &lt;<span class="hljs-keyword">file</span>&gt;<br></code></pre></td></tr></table></figure><p>其中，<code>&lt;file&gt;</code> 表示需要添加到仓库中的文件名或目录名。</p><h2 id="3-提交修改到版本库"><a href="#3-提交修改到版本库" class="headerlink" title="3. 提交修改到版本库"></a>3. 提交修改到版本库</h2><p>添加文件到仓库后，需要使用 <code>git commit</code> 命令将修改提交到版本库中。提交时需要添加提交信息，用于描述本次修改的内容。</p><p>Copy</p><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-variable">$ </span>git commit -m <span class="hljs-string">&quot;提交信息&quot;</span><br></code></pre></td></tr></table></figure><p>其中，<code>-m</code> 参数后面的内容表示提交信息，可以根据实际情况进行修改。</p><h2 id="4-关联远程仓库"><a href="#4-关联远程仓库" class="headerlink" title="4. 关联远程仓库"></a>4. 关联远程仓库</h2><p>如果需要将本地仓库推送到远程仓库中，需要先关联远程仓库。可以使用 <code>git remote add</code> 命令将本地仓库和远程仓库进行关联。</p><p>basic</p><p>Copy</p><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">$ git remote <span class="hljs-keyword">add </span><span class="hljs-keyword">origin </span>&lt;remote_repository_url&gt;<br></code></pre></td></tr></table></figure><p>其中，<code>&lt;remote_repository_url&gt;</code> 表示远程仓库的 URL 地址。</p><h2 id="5-推送代码到远程仓库"><a href="#5-推送代码到远程仓库" class="headerlink" title="5. 推送代码到远程仓库"></a>5. 推送代码到远程仓库</h2><p>关联远程仓库后，可以使用 <code>git push</code> 命令将本地仓库中的代码推送到远程仓库中。</p><p>Copy</p><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs maxima">$ git <span class="hljs-built_in">push</span> -u <span class="hljs-built_in">origin</span> master<br></code></pre></td></tr></table></figure><p>其中，<code>-u</code> 参数表示将本地 <code>master</code> 分支与远程 <code>origin</code> 仓库的 <code>master</code> 分支进行关联。以后每次使用 <code>git push</code> 命令时，只需要指定分支名即可。</p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>通过以上步骤，可以轻松地创建新的 Git 仓库，并将修改的文件提交到版本库中。同时，还可以将本地仓库与远程仓库进行关联，并将代码推送到远程仓库中。这些步骤是 Git 开发过程中非常基础和必要的一部分。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>git</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>git工作流程(2)</title>
+    <link href="/2023/06/06/git%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B2/"/>
+    <url>/2023/06/06/git%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B2/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Git-工作流程"><a href="#Git-工作流程" class="headerlink" title="Git 工作流程"></a>Git 工作流程</h1><p>Git 工作流程可以分为以下几个阶段：</p><ol><li>工作目录（Working Directory）：包含当前正在工作的文件。</li><li>暂存区（Staging Area）：用于存放已经完成修改的文件，但还没有提交到版本库中。</li><li>版本库（Repository）：包含所有已经提交的文件版本和提交历史记录。</li></ol><p>Git 的工作流程如下：</p><ol><li>在工作目录中修改文件。</li><li>使用 <code>git add</code> 命令将修改的文件添加到暂存区。</li><li>使用 <code>git commit</code> 命令将暂存区的文件提交到版本库中。</li><li>如果需要，可以使用 <code>git branch</code> 命令创建新的分支。</li><li>在分支上进行开发工作，可以多次进行修改、暂存和提交操作。</li><li>完成开发后，使用 <code>git merge</code> 命令将分支合并到主分支中。</li><li>可以使用 <code>git push</code> 命令将本地的提交推送到远程仓库中。</li><li>如果需要，可以使用 <code>git pull</code> 命令从远程仓库中拉取最新的修改。</li></ol><p>通过上述步骤，可以实现多人协同开发、版本控制和代码共享等功能。同时，Git 还支持分支管理、标签管理和远程仓库管理等高级特性，可以帮助开发人员更加高效地进行代码管理和协作工作。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>git</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>git教程(1)</title>
+    <link href="/2023/06/06/git%E7%AE%80%E4%BB%8B1/"/>
+    <url>/2023/06/06/git%E7%AE%80%E4%BB%8B1/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Git-简介"><a href="#Git-简介" class="headerlink" title="Git 简介"></a>Git 简介</h1><p>Git 是一种分布式版本控制系统，最初由 Linus Torvalds 在 2005 年为了更好地管理 Linux 内核的开发而创建。它可以追踪文件的修改历史，允许多人协同开发，并支持分支和合并等操作。</p><p>与集中式版本控制系统不同，Git 的每个工作副本都是完整的代码库。这意味着每个人都可以在自己的计算机上完全独立地进行开发，并且不需要连接到中央服务器。Git 通过使用哈希值来标识文件和目录，以及使用分支和标签来引用特定的提交，来实现版本控制和代码共享。</p><p>Git 具有以下优点：</p><ul><li>高效的分支和合并操作，使得多人协同开发变得简单快捷。</li><li>快速的提交和回滚操作，使得开发过程更加灵活和高效。</li><li>强大的版本控制和代码追踪功能，使得开发过程更加可控和可靠。</li></ul><p>Git 是目前最流行的版本控制系统之一，广泛应用于软件开发、文档管理和各种形式的协作工作。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>git</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>VM</title>
     <link href="/2023/06/05/VM/"/>
     <url>/2023/06/05/VM/</url>
@@ -25,19 +100,6 @@
       <tag>bug</tag>
       
     </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="/2023/06/04/hello-world/"/>
-    <url>/2023/06/04/hello-world/</url>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-    
-    
     
   </entry>
   
